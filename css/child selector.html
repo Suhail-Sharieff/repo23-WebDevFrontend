@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>child slector</title>
+    <style>
+        /* child selector */
+        div>p{
+            background-color: aquamarine;
+        }
+        /* matlab div ke andar ka p tag */
+        /* decendant coolector */
+        div p{
+            color: brown;
+            /* matlab kisi bhi div me agar p hai toh usko laagu hoga */
+        }
+
+        /* pseudo selector */
+        a:visited{
+            color: green;
+            /* after visiting the link turns yellow */
+        }
+        a:link{
+            color: red;
+            /* before isiting it will be red */
+        }
+        a:active{
+            /* when u click the link its background color changes */
+          background-color: rgb(68, 0, 255);
+
+        }
+        a:hover{
+            background-color: orange;
+        }
+
+
+
+</style>
+</head>
+<body>
+    <div>
+        imma not a para
+        <hr>
+        <p>imma a para</p>
+    </div>
+
+<a href="https://www.google.com" >google link</a>
+
+
+</body>
+</html>

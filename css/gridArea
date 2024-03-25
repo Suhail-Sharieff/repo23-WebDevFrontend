@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssgird</title>
+    <style>
+        .container{
+            border: 2px solid yellow;
+            display: grid;
+           
+           grid-template-areas: "nav nav nav""side side article"
+           "footer footer footer";
+
+            
+        }
+        .item{
+            border: 2px solid red;
+            height: 200px;
+            
+           
+            
+        }
+        .item1{
+           
+            grid-area: nav;
+
+        }
+        .item2{
+            
+            grid-area: side;
+
+        }
+        .item3{
+           
+            grid-area: article;
+
+        }
+        .item4{
+            
+            grid-area: footer;
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1>css grid is uised to make layouts</h1>
+
+    <div class="container">
+       <div class="item item1">1 nav baar</div>
+       <div class="item item2">2article</div>
+       <div class="item item3">3side</div>
+       <div class="item item4">4footer</div>
+       
+    </div>
+</body>
+</html>

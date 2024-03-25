@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specificity</title>
+    <style>
+        h1{
+            color: orange;
+        }
+        .one{
+            color: rgb(54, 30, 210);
+        }
+        .two{
+            color: blue;
+        }
+        .three{
+            color: mediumaquamarine !important;
+            color: violet;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div><h1>the one presnt at last is excecuted</h1></div>
+    <hr>
+    <hr>
+    <div>
+        <h1 class="one two three">this is css specificity</h1>
+        this is called cascading property
+        <br>rules:
+        <ol>
+            <li>position and order,the one at last is given preference</li>
+            <li>the one with higher value of specificity is given more preference</li>
+            <li>'! important tag'>inline>id selector>class>element >universal selector</li>
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<style>
+    body{
+        justify-content: center;
+    }
+    .container{
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:500px;
+        width: 500px;
+
+        
+
+
+    }
+    .box{
+        background-color: blue;
+        height: 250px;
+        width: 250px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box" onmouseover="alert('u hovered on box')">
+            <!-- inline js for buttons -->
+            <button onclick="alert(`the button was clicked`); prompt('enter some value')">Click me!</button>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>

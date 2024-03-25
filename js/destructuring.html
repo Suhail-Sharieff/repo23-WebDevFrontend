@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destucturing</title>
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+    <script>
+let [x,y]=[1,2];
+console.log(x,y);
+
+
+
+//destructuctering
+let [a,b,...oth]=[1,2,3,4,5,6,7,8,9,10]
+console.log(a,b,oth);
+
+
+
+//spose u want sum of all terms in an array
+
+let arr=[1,2,3]
+function sum(a,b,c) {
+    return (a+b+c)
+}
+console.log("the sum is "+sum(arr[0],arr[1],arr[2]));
+//the above line is eq to 
+console.log("th sum is "+sum(...arr));
+
+    </script>
+</body>
+</html>

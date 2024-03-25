@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;margin: 0;
+        }
+        .cards img{
+            float: right;
+            
+        }
+        .cards{
+            border: 2px solid black;
+            /* to put imgh also within the border so that it doesnt overflow  */
+            display: flow-root; 
+        }
+        .card{
+            border: 2px solid black;
+        }
+        .card:nth-child(2){
+            background-color: aqua;
+            clear: right;
+            /* matlab 2nd child ie card2 ke block me mujhe img nahhi chahiye */
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="WIN_20231226_21_43_57_Pro.jpg" width="230px">
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed provident labore pariatur nobis ipsa illo iusto sunt sapiente eum officiis quos, rem, amet repellat eius assumenda sit laboriosam ut harum omnis. Accusamus, commodi velit.</p>
+        </div>
+        <div class="card">card2</div>
+        <div class="card">card3</div>
+    </div>
+</body>
+</html>

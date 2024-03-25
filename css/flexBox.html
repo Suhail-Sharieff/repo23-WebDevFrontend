@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.that::after{
+    content: suhail is a good boy;
+}
+
+::selection{
+    /* this changes text color to aqua if user triues to selct it */
+    color: rgb(7, 57, 239);
+}
+/* .this::first-line   {
+color: chartreuse;
+} */
+.this:nth-child(even){
+    color: rgb(240, 7, 11);
+}
+input::placeholder{
+    color: red;
+    
+}
+.that::first-letter{
+font-size: 6em;
+color: purple;
+}
+
+    </style>
+</head>
+<body>
+    <div class="this">
+       <div class="that">suhail</div>
+       <div class="that">suhail</div>
+       <div class="that">suhail</div>
+       <div class="that">suhail</div>
+    </div>
+    <hr>
+    <input type="text" placeholder="type your name here">
+</body>
+</html>

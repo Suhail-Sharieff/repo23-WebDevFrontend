@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sizing</title>
+    <style>
+        .one{
+            border: 2px solid;
+            width:fit-content;
+            margin: auto;
+            /* this margin iis block level */
+        }
+        .two{
+            display: inline;
+            border: 2px solid red;
+        }
+        .thre{
+            border: 2px solid red;
+            display: inline-block;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <p>this is para</p>
+        <p>usually use viewport width to enable that stuff to take as much view port is available</p>
+
+    </div>
+    
+    we can also make a div to display and function as inline element using display inline tag in css
+    <div class="two">
+        imma div 2
+    </div>
+    <div class="thre">
+        immma div 3
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- //document object model -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color: red;
+        width: 400px;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+    }
+    .box{
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">
+<p id="ID">suhail</p>
+        </div>
+    </div>
+<!-- create script just bfr body -->
+<script>
+    // console.log("suhail");
+    // console.log(document.childNodes[2]);
+
+
+    //souts attribuutr name
+var para=document.querySelector("p").getAttribute("id")
+console.log(para);
+
+//to chaneg artibute value use set sttribute
+var para=document.querySelector("p").setAttribute("ID","new ID")
+
+
+//node.append-->changes pos 
+
+//to create new elemt
+
+    
+</script>
+</body>
+
+</html>

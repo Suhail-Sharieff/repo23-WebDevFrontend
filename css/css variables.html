@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssVar</title>
+    <style>
+
+        /* variable */
+        :root{
+            --firstcolor:green;
+            --secondcolor:orange;
+            --someOpacity: 0.2;
+        }
+
+
+
+        *{
+            margin: 0;padding: 0;
+        }
+.nav{
+    background-color: greenyellow;
+}
+.cont{
+    background-color: plum;
+}
+ul {
+    display: flex;
+    justify-content: center;
+   text-justify:distribute-all-lines;
+}
+ul li{
+    list-style: none;
+}
+
+/* using variables */
+.daaaa{
+    background-color: var(--firstcolor);
+    border: 2px solid var(--secondcolor);
+}
+ul li:first-child{
+    background-color: var(--secondcolor);
+}
+ul li:last-child{
+    background-color: var(--firstcolor)
+    ;
+    opacity: var(--someOpacity);
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>CONTACT</li>
+                <li>ABOUT</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="cont">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique non quia deserunt perferendis nemo hic dolores, vero accusamus nesciunt distinctio! Nulla rerum quidem atque laborum dolore amet excepturi impedit recusandae cum dolor. Nobis dolor, cum vitae laboriosam vero atque ea recusandae iure, saepe, accusantium quisquam.
+    </div>
+
+
+<hr><hr><hr><hr><hr><hr><hr><br><br><br>
+<h1>now using variables</h1>
+<div class="daaaa">
+    <p>this isa para</p>
+</div>
+</body>
+</html>

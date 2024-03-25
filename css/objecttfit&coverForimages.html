@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 634px;
+            width: 688px;
+            border: 2px solid black
+            ;
+            background-color: rgb(24, 221, 221);
+
+        }
+        .container img{
+            width: 466px;height: 466px;
+            /* to enable that img covers 466 dimensions completely use objexct fit by cutting   */
+            /* object-fit: cover; */
+            /* object-fit: contain; but this will give some bad spaces  */
+            
+            /* object-fit: cover;
+            object-position: bottom left; */
+
+
+            /* object-fit: fill; */
+            /* this occupis full dimensions of 466px as fiven */
+
+
+            object-fit: scale-down;
+
+        }
+        .container2 img{
+        width: 466px;height: 466px;
+        background-image:url();
+        background-position: center center;
+        background-repeat: no-repeat  
+        
+        
+        }
+
+
+
+    </style>
+</head>
+<body><div class="container">
+    <img src="WIN_20231226_21_43_57_Pro.jpg" alt="">
+
+    </div>
+<body><div class="container2">
+    <img src="WIN_20231226_21_43_57_Pro.jpg" alt="">
+
+    </div>
+</div>
+</body>
+</html>

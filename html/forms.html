@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>forms</title>
+  </head>
+  <body>
+    get form to send info to server
+    <br /><br /><br />
+    <hr />
+    <h1>fill this form</h1>
+    <form action="post">
+      name:
+      <input
+        type="text"
+        name="username"
+        placeholder="enter ur username"
+      /><br />
+      roll: <input type="number" name="roll" placeholder="enter ur roll num" required/>
+      <br />
+      password:
+      <input
+        type="password"
+        name="password"
+        placeholder="enter valid password"
+      /><br />
+      dob: <input type="date" name="date" />
+    </form>
+    <hr />
+    <hr />
+    <hr />
+    <h1>fill this form</h1>
+    <label for="name">name</label>
+    <input type="text" id="name" name="name" placeholder="enter your name" />
+    <hr />
+    <hr />
+    <hr />
+
+    <div>
+      <h1>radio</h1>
+      <label for="male">male</label>
+      <input type="radio" id="male" name="gender" />
+
+      <label for="female">female</label>
+      <input type="radio" id="female" name="gender" />
+
+      <hr />
+      labell first always and for unique name is same
+      <hr />
+    </div>
+
+    <div>
+      <h1>checkbox</h1>
+      <label for="gender2">mark1</label>
+      <input type="checkbox" id="gender2" name="one" />
+      <label for="gender2">mark1</label>
+      <input type="checkbox" id="gender2" name="one" />
+    </div>
+    <hr>
+    <h1>texta area</h1>
+    <label for="textarea">type address</label><br>
+    <textarea name="textarea" id="textarea" cols="30" rows="1" placeholder="enter your address"></textarea>
+    <hr><hr><hr>
+<div>
+    <h1>select type</h1>
+    <label for="select">please select your fruit</label>
+   <select name="select fruit" id="select">
+
+     <option value="appple">apple</option>
+  <option value="babana">babana</option>
+  <option value="mango">mango</option>
+   </select>
+ 
+
+
+</div>
+<hr><hr>
+can assign pattern of input u want in input using 'pattern' keyword
+<br><hr>
+<hr>
+
+  </body>
+</html>

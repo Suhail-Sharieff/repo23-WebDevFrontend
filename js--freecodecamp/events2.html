@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>events2</title>
+  </head>
+  <style>
+    body {
+      justify-content: center;
+    }
+    .container {
+      background-color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+      width: 500px;
+    }
+    .box {
+      background-color: blue;
+      height: 250px;
+      width: 250px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <button id="dark">Change to yellow</button>
+      <div class="box">
+        <button id="btn">Click me!</button>
+      </div>
+    </div>
+    <script>
+      //node.event=()=>{
+      // handle here
+      // }
+      // let btn=document.querySelector("#btn")
+      // btn.onclick=() => {
+      //     alert("btn was clciked")
+      // };
+      //js>>>>inline
+      // let box=document.querySelector(".box")
+      // box.onmouseover=()=>{
+      //     alert("box was hovered")
+      // };
+
+      //event object
+      //it has details aboyut the event done
+      //node.event=(e)=>{
+      // handle here
+      // }
+      //ex:
+      btn.onclick = (e) => {
+        console.log(e);
+        //prints all details like target,type of ebvent ie click,clientX,clientY,target,type r most imp
+      };
+
+      //event listeners
+      //node.addEventListener("event",callbackfn)
+      //both events r executed here
+      btn.addEventListener("click", (e) => {
+        console.log(e);
+        alert("btn was clicked 1");
+      });
+      btn.addEventListener("click", () => {
+        alert("btn was  clicked 2");
+      });
+
+      //to remove event listener say some handler 3,first store it in a fnction
+      const handler3 = () => {
+        alert("btn was  clicked 3");
+      };
+      //then
+      btn.removeEventListener("click", handler3);
+
+
+
+
+
+
+
+
+      //dark and light theme demo
+      //single click yellow bcg and when clicked again greeen
+      let dark=document.querySelector("#dark");
+      let theme="yellow"
+      dark.addEventListener("click",()=>{
+       if (theme=="yellow") {
+        dark.innerText="change to green"
+        theme="green"
+         document.querySelector("body").style.backgroundColor="yellow"
+         
+       }
+       else{
+        dark.innerText="change to yellow"
+
+        // documnet.querySelector("#btn").innerText="change to yellow"
+        theme="yellow"
+        document.querySelector("body").style.backgroundColor="green"
+       }
+      })
+      
+    </script>
+  </body>
+</html>

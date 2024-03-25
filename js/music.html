@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smaple</title>
+
+    <style>
+        .c{
+           display: flex;
+           flex-direction: row;
+           gap: 15px;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           width: 100vw;
+           background-color: black;
+
+            
+
+        }
+        .b{
+            border: 2px solid black;
+            
+            border-radius: 60px;
+            
+         
+        }
+        
+
+     
+    </style>
+</head>
+<body>
+    <div class="c">
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+       
+        
+        
+    </div>
+    <script>
+
+        let arr=document.querySelector(".c").children
+
+        function generate() {
+            let x=Math.ceil(Math.random()*255);
+            let y=Math.ceil(Math.random()*255);
+            let z=Math.ceil(Math.random()*255);
+            return `rgb(${x},${y},${z})`
+        }
+
+        function h() {
+            let a=Math.ceil(Math.random()*520);
+            // let b=Math.ceil(Math.random()+55);
+            // let c=Math.ceil(Math.random()+55);
+            return `${a}px`;
+        }
+        function w() {
+            let b=Math.ceil(9+Math.random()*1);
+            // let b=Math.ceil(Math.random()+55);
+            // let c=Math.ceil(Math.random()+55);
+            return `${b}px`;
+        }
+/*
+
+when u want a event to occur only with reload
+        Array.from(arr).forEach((e)=>{
+            e.style.backgroundColor=generate();
+            
+            e.style.height=h();
+            e.style.width=w();
+           
+        })
+
+        */
+
+
+        //when no reload is needed
+        setInterval(() => {
+            Array.from(arr).forEach((e)=>{
+            e.style.backgroundColor=generate();
+            // e.style.backgroundColor="red";
+            
+            e.style.height=h();
+            e.style.width=w();
+           
+        })
+        }, 350);
+    </script>
+</body>
+</html>

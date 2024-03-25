@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP</title>
+    <style>
+
+ 
+
+    </style>
+  </head>
+  <body>
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+class suhail{
+    
+    constructor(){
+        console.log("object is created");
+    }
+    fun1(){
+        console.log("imma fun1");
+        var x;
+    }
+    fun2(){
+        console.log("imma fun2");
+    }
+    fun3(name){
+        this.name=name;
+        console.log("imma "+name);
+    }
+}
+
+let object=new suhail
+console.log(object);
+console.log(object.fun1());
+console.log(object.fun2());
+console.log(object.fun3("suhail shareiff"));
+
+class sharieff extends suhail{
+    fun4(v){
+        console.log("imma fun4");
+        this.v=v;
+        console.log(v);
+    }
+}
+
+let z=new sharieff;
+console.log(z.fun4(23));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bbbling</title>
+    <style>
+        .parent{
+            background-color: red;
+            border: 2px solid black;
+            height: 50vh;width: 100vw;
+            padding: 30px;
+        }
+        .inner{
+            background-color: rgb(34, 226, 126);
+            border: 2px solid black;
+            height: 50vh;width: 100vw;
+            
+        }
+        .innermost{
+            background-color: rgb(245, 241, 25);
+            border: 2px solid black;
+            height: 30vh;width: 30vh;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="inner">
+            <div class="innermost">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".innermost").addEventListener("click",(e)=>{
+            //if u dont add stop propagation it shows al parents also when child was clicked
+            e.stopPropagation();
+            alert("innermost waas clicked");
+        })
+
+
+        document.querySelector(".inner").addEventListener("click",(e)=>{
+            e.stopPropagation();
+            alert("inner was clicked");
+        })
+
+
+        document.querySelector(".parent").addEventListener("click",(e)=>{
+            alert("parent was clicked");
+        })
+
+
+        //set timeoutn is used to just change something just once
+
+        setInterval(() => {
+            document.querySelector(".innermost").style.backgroundColor=`rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`;
+
+            document.querySelector(".inner").style.backgroundColor=`rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`;
+
+            document.querySelector("body").style.backgroundColor=`rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`;
+
+            document.querySelector(".parent").style.backgroundColor=`rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`;
+        }, 3000);
+    </script>
+</body>
+</html>

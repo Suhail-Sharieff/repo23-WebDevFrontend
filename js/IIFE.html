@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    /*
+    //old method
+    async function prom() {
+        return new  Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve(90)
+            }, 2000);
+        })
+    }
+    async function implementProm() {
+        let x=await prom()
+        console.log("wait1");
+        let y=await prom()
+        console.log("wait2");
+        let z=await prom()
+        console.log("wait3");
+    }
+    implementProm()
+    */
+
+
+
+
+    //new method using IIFE--immediately invoke function expression
+    async function prom() {
+        return new  Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve(90)
+            }, 2000);
+        })
+    }
+    (async function implementProm(){
+        let x=await prom()
+        console.log("wait1");
+        let y=await prom()
+        console.log("wait2");
+        let z=await prom()
+        console.log("wait3");
+    })()//ie no need to call entire function just these '()' is enough
+</script>
+</body>
+</html>

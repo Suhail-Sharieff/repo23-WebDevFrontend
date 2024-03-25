@@ -1,0 +1,22 @@
+<!-- making a counter -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>without react</title>
+</head>
+<body>
+    <h1>this is a button</h1>
+    <div class="num">0</div>
+    <button class="btn">click this to increase num by 1</button>
+    <script>
+        document.querySelector(".btn").addEventListener("click",()=>{
+            let n=parseInt(document.querySelector(".num").innerHTML);
+          (document.querySelector(".num").innerHTML)=n+1;
+        })
+    </script>
+</body>
+</html>
