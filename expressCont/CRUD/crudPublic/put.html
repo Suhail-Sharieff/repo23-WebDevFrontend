@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>put req</title>
+</head>
+<body>
+    <div class="text">
+
+    </div>
+    <script>
+        async function testPost() {
+            let a=await fetch('/put',{method:"PUT"})
+            let b=await a.text()
+            console.log(b);//gets "res.send("its post req")" 
+        }
+        testPost()
+
+        document.querySelector('.text').innerHTML="got put req";
+
+    </script>
+</body>
+</html>
