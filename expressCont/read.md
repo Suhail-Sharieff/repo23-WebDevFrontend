@@ -1,0 +1,1 @@
+Express js was introduced because in normal javascript suppose if we have to put delete post and perform some crude operations we have to write the custom code that is the complete implementation but however Expressjs provides these ready made methods and we don't have to implement it from the scratch
