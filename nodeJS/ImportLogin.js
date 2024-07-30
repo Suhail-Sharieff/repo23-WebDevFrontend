@@ -1,3 +1,5 @@
 //lets import func in ExportLOin
-import './ExportLogin';
+import def from './ExportLogin.js';
+
+console.log(def);
 
