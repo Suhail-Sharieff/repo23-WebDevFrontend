@@ -11,11 +11,17 @@ const app=express()
 const port=3000
 
 
-app.get('/',(req,res)=>{
+app.get('/',async (req,res)=>{
     const todo=new Todo({title:"First",task:"Clean House",isDone:false})
     todo.save()//now db will have this on ach run
-    res.send("Hello")
+    res.json({title:todo.title,task:todo.task})
 })
+
+app.get('/getAllTodosAsJSON',async(req,res)=>{//http://localhost:3000/getAllTodosAsJSON
+    const all=await Todo.find()
+    res.json(all)
+})
+
 app.listen(port,()=>{
     console.log(`Launched http://localhost:${port}`);
 })
