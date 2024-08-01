@@ -17,10 +17,10 @@ files.forEach(file=> {
 import path from "path"
 for (const file of files) {
     // Get the file extension
-    const sourceDir = path.extname(file).slice(1); // Get extension and remove the dot
-    if (sourceDir) {
+    const extensionName = path.extname(file).slice(1); // Get extension and remove the dot
+    if (extensionName) {//if souceDir  exists 
       // Define the directory path for the extension
-      const destinationDir = path.join(basePath, sourceDir);
+      const destinationDir = path.join(basePath, extensionName);
 
       // Check if the directory for the extension exists, create it if it doesn't
       try {
