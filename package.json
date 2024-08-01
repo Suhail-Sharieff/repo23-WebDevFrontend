@@ -48,6 +48,7 @@
     "mongodb": "^6.8.0",
     "mongoose": "^8.5.2",
     "ms": "^2.0.0",
+    "mysql2": "^3.11.0",
     "negotiator": "^0.6.3",
     "object-inspect": "^1.13.1",
     "on-finished": "^2.4.1",
