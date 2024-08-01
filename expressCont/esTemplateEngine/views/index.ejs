@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJS</title>
+  </head>
+  <body>
+    hello <%=userName%>
+    <hr />
+    the array:<%=arr%>
+    <hr />
+    the loop: <br />
+    <% for (var i = 0; i < arr.length; i++) { %> 
+        <ul>
+            <li><%= arr[i] %></li>
+        </ul> 
+    <% }%>
+    <hr>
+    showing sample.ejs here:---DONT PUT ABSOLUTE PATH HERE
+    <%- include('sample') %>
+    <hr>
+    
+  </body>
+</html>
