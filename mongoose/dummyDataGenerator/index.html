@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    
+    
+    <button id="make">Make</button>
+    <button id="erase">Erase</button>
+    <button id="json">Get data as JSON</button>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('erase').addEventListener('click',async function() {
+            const response = await fetch('/erase');
+            const message = await response.text();
+            document.getElementById('output').innerText = message;
+        })
+        document.getElementById('make').addEventListener('click',async function() {
+            const response=await fetch('/make')
+            const message=await response.text()
+            document.getElementById('output').innerText=message
+        })
+        document.getElementById('json').addEventListener('click',async function () {
+            const res=await fetch('/getAllAsJSON')
+            const message=await res.json()   
+            document.getElementById('output').innerText=JSON.stringify(message,null,2)
+        })
+    </script>
+    
+</body>
+</html>
