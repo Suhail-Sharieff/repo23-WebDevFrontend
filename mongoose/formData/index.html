@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+</head>
+<body>
+    <form id="employeeForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="salary">Salary:</label>
+        <input type="text" id="salary" name="salary" required><br>
+
+        <label for="language">Language:</label>
+        <input type="text" id="language" name="language" required><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br>
+
+        <label for="isManager">Is Manager:</label>
+        <input type="checkbox" id="isManager" name="isManager"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <button id="make">Make</button>
+    <button id="erase">Erase</button>
+    <button id="getJson">Get JSON</button>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('employeeForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            data.isManager = formData.get('isManager') === 'on';
+
+            const response = await fetch('/addEmployee', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const message = await response.text();
+            document.getElementById('output').innerText = message;
+        });
+
+        document.getElementById('make').addEventListener('click', async function() {
+            const response = await fetch('/make');
+            const message = await response.text();
+            document.getElementById('output').innerText = message;
+        });
+
+        document.getElementById('erase').addEventListener('click', async function() {
+            const response = await fetch('/erase');
+            const message = await response.text();
+            document.getElementById('output').innerText = message;
+        });
+
+        document.getElementById('getJson').addEventListener('click', async function() {
+            const response = await fetch('/getAllAsJSON');
+            const data = await response.json();
+            document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+        });
+    </script>
+</body>
+</html>
