@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+</head>
+<body>
+    <h1>Login System</h1>
+    <form id="signupForm">
+        <h2>Sign Up</h2>
+        <label for="signupEmail">Email:</label>
+        <input type="email" id="signupEmail" name="email" required><br>
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" name="password" required><br>
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <form id="signinForm">
+        <h2>Sign In</h2>
+        <label for="signinEmail">Email:</label>
+        <input type="email" id="signinEmail" name="email" required><br>
+        <label for="signinPassword">Password:</label>
+        <input type="password" id="signinPassword" name="password" required><br>
+        <button type="submit">Sign In</button>
+    </form>
+
+    <form id="forgotPasswordForm">
+        <h2>Forgot Password</h2>
+        <label for="forgotEmail">Email:</label>
+        <input type="email" id="forgotEmail" name="email" required><br>
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" name="newPassword" required><br>
+        <button type="submit">Reset Password</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            const response = await fetch('/api/auth/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const message = await response.text();
+            document.getElementById('output').innerText = message;
+        });
+
+        document.getElementById('signinForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            const response = await fetch('/api/auth/signin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+            document.getElementById('output').innerText = result.token ? 'Sign in successful' : result;
+        });
+
+        document.getElementById('forgotPasswordForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            const response = await fetch('/api/auth/forgot-password', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const message = await response.text();
+            document.getElementById('output').innerText = message;
+        });
+    </script>
+</body>
+</html>
