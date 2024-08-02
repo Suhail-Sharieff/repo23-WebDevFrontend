@@ -33,6 +33,7 @@ app.post('/addEmployee', async (req, res) => {
 
 app.get('/make', async (req, res) => {
     try {
+        const employees=[new db({name:"demo",salary:90,language:"JS",city:"Unknown",isManager:false})]
         await db.deleteMany({}); // Clear existing data
         for (let employee of employees) {
             await employee.save();
