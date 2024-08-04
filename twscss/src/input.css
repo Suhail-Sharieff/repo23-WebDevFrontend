@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+/* place it bfr utility so that u can overrise */
+.useBtnclass{
+    @apply
+    border bg-red-400 hover:text-2xl  active:bg-pink-600 
+}
+@tailwind utilities;
+

@@ -1,0 +1,20 @@
+{
+  "name": "twscss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tw": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.7"
+  },
+  "dependencies": {
+    "twscss": "file:",
+    "vite": "^5.3.5"
+  }
+}

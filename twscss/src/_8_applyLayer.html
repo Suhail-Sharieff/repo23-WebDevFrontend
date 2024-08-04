@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <code class="text-2xl"
+      ><h1 class="text-rose-500">The code :</h1>
+      <code class="text-green-500">
+        @tailwind base; <br />
+        @tailwind components; <br />
+        .useBtnclass{ @apply border bg-red-400 hover:text-2xl active:bg-pink-600
+        } <br />
+        @tailwind utilities;
+      </code>
+      <br />
+      <h1 class="text-red-500">is equivalent to the code:</h1>
+      <code class="text-blue-500">
+        @tailwind base <br />
+        @tailwind components <br />
+        @tailwind utilities <br />
+
+        @layer components{ <br />
+        .useBtnclass{ @apply border bg-red-400 hover:text-2xl active:bg-pink-600
+        } <br />
+        }
+      </code>
+    </code>
+
+
+    means that we dont have to again and again write overidable componts after componts and before utilities of tailwind , instaed we can define @layer layerNameBeforeWhichWeWantOverridableThings{@apply:stuff}
+
+    <div class="animate-bounce">
+        <div class="bg-black border rounded-s-full w-10 h-10">f</div>
+    </div>
+  </body>
+
+</html>
