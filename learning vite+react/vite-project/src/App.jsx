@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Body1 from './components/Body1'
 import './output.css'
+import Counter from './components/Counter'
 
 function App() {
 
@@ -15,10 +16,8 @@ function App() {
         <Body1 sentence="This is a Sentence 4" />
         <Body1 sentence="This is a Sentence 5" />
         <Body1 sentence="This is a Sentence 6" />
-        <Body1 sentence="This is a Sentence 7" />
-        <Body1 sentence="This is a Sentence 8" />
-        
       </div>
+      <Counter/>
       <Footer />
     </>
   )
