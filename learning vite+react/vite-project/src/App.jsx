@@ -4,6 +4,8 @@ import Body1 from './components/Body1'
 import './output.css'
 import Counter from './components/Counter'
 import Video from './components/Video'
+import ConditionalBtn from './components/ConditionalBtn'
+import LoopEx from './components/LoopEx'
 
 function App() {
 
@@ -23,6 +25,11 @@ function App() {
       <Counter/>
 
       <Video/>
+
+      <ConditionalBtn/>
+
+      <LoopEx/>
+      
       <Footer />
     </>
   )
