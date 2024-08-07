@@ -3,12 +3,14 @@ import Footer from './components/Footer'
 import Body1 from './components/Body1'
 import './output.css'
 import Counter from './components/Counter'
+import Video from './components/Video'
 
 function App() {
 
   return (
     <>
       <Navbar />
+
       <div className="imageCards grid grid-cols-3">
         <Body1 sentence="This is a Sentence 1" />
         <Body1 sentence="This is a Sentence 2" />
@@ -17,7 +19,10 @@ function App() {
         <Body1 sentence="This is a Sentence 5" />
         <Body1 sentence="This is a Sentence 6" />
       </div>
+
       <Counter/>
+
+      <Video/>
       <Footer />
     </>
   )
