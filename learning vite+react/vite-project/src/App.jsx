@@ -6,6 +6,7 @@ import Counter from './components/Counter'
 import Video from './components/Video'
 import ConditionalBtn from './components/ConditionalBtn'
 import LoopEx from './components/LoopEx'
+import APIuse from './components/APIuse'
 
 function App() {
 
@@ -29,6 +30,8 @@ function App() {
       <ConditionalBtn/>
 
       <LoopEx/>
+
+      <APIuse/>
       
       <Footer />
     </>
