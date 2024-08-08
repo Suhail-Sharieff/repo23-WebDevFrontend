@@ -7,6 +7,7 @@ import Video from './components/Video'
 import ConditionalBtn from './components/ConditionalBtn'
 import LoopEx from './components/LoopEx'
 import APIuse from './components/APIuse'
+import Form from './components/Form'
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
     <>
       <Navbar />
 
-      <div className="imageCards grid grid-cols-3">
+      <div className="imageCards grid grid-cols-3 ">
         <Body1 sentence="This is a Sentence 1" />
         <Body1 sentence="This is a Sentence 2" />
         <Body1 sentence="This is a Sentence 3" />
@@ -23,7 +24,7 @@ function App() {
         <Body1 sentence="This is a Sentence 6" />
       </div>
 
-      <Counter/>
+      {/* <Counter/> */}
 
       <Video/>
 
@@ -32,7 +33,8 @@ function App() {
       <LoopEx/>
 
       <APIuse/>
-      
+
+      <Form/>
       <Footer />
     </>
   )
