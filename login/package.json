@@ -13,10 +13,15 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon C:\\Users\\suhai\\Desktop\\repo23-WebDevFrontend\\login\\app.js",
+    "startBoth": "concurrently \"npm run dev\" \"npx tailwindcss -i ./views/input.css -o ./views/output.css --watch\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.9"
+  }
 }
