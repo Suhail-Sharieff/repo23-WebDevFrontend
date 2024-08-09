@@ -248,7 +248,7 @@
                 body: JSON.stringify(data)
             });
 
-            const result = await response.json();
+            const result = await response.text();
             document.getElementById('output').innerText = result.token ? 'Sign in successful' : result;
             const a=result.token ? 'Sign in successful' : result;
             alert(a);
