@@ -17,3 +17,4 @@ Array.from(boxes).forEach(e=>{
 e.style.backgroundColor=genRandomColor();
   
 })
+

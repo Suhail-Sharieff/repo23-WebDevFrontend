@@ -26,9 +26,11 @@ router.post('/signin', async (req, res) => {
         if (!isMatch) return res.status(400).send('Invalid email or password');
 
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-        res.json({ token });
+        // res.json({ token });
+        res.send("SigIn Successfull")
     } catch (error) {
-        res.status(400).send('Error signing in');
+        res.status(400).json({ error: 'Invalid email or password' });
+
     }
 });
 
@@ -42,7 +44,7 @@ router.post('/forgot-password', async (req, res) => {
         await user.save();
         res.send('Password reset successfully');
     } catch (error) {
-        res.status(400).send('Error resetting password');
+        res.status(400).send('User Registered Already!');
     }
 });
 
