@@ -4,7 +4,9 @@ import CounterWithUseState from "./componentsOfApp/_03_Counter_With_UseState"
 import { MultiplePropCard } from "./componentsOfApp/_05_PropsUse"
 import { API } from "./componentsOfApp/_06_fromAPI"
 import { BgChanger } from "./componentsOfApp/_06_bgChanger"
-import { PasswordGen } from "./componentsOfApp/useEff,useRef,useCallBack/_07_passwordGen"
+import { UseCallBack } from "./componentsOfApp/useEff,useRef,useCallBack/_07_useCallBack"
+import { UseEff } from "./componentsOfApp/useEff,useRef,useCallBack/_07_useEffect"
+import { UseRef } from "./componentsOfApp/useEff,useRef,useCallBack/_07_useRef"
 
 
 
@@ -25,7 +27,9 @@ function App() {
       {/* <MultiplePropCard arr={PropArr}/> */}
       {/* <API/> */}
       {/* <BgChanger/> */}
-      <PasswordGen/>
+      {/* <UseCallBack/> */}
+      {/* <UseEff/> */}
+      <UseRef/>
       
     </>
   )
