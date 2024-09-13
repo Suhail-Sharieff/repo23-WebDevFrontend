@@ -7,6 +7,7 @@ import { BgChanger } from "./componentsOfApp/_06_bgChanger"
 import { UseCallBack } from "./componentsOfApp/useEff,useRef,useCallBack/_07_useCallBack"
 import { UseEff } from "./componentsOfApp/useEff,useRef,useCallBack/_07_useEffect"
 import { UseRef } from "./componentsOfApp/useEff,useRef,useCallBack/_07_useRef"
+import { CurrencyConvert } from "./componentsOfApp/_08_currencyConverter_CustomHooks"
 
 
 
@@ -29,7 +30,9 @@ function App() {
       {/* <BgChanger/> */}
       {/* <UseCallBack/> */}
       {/* <UseEff/> */}
-      <UseRef/>
+      {/* <UseRef/> */}
+      <CurrencyConvert/>
+
       
     </>
   )
