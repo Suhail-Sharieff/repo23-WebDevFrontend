@@ -3,7 +3,6 @@ import { useCallback, useEffect, useState } from "react";
 export function CurrencyConvert() {
 
     const [from, setFrom] = useState("")
-    const [to, setTo] = useState("")
     const [countrArr, setCountrArr] = useState([])
     const [ans,setAns]=useState(0)
     const [fromType,setFromType]=useState("USD")
@@ -37,8 +36,7 @@ export function CurrencyConvert() {
         // let raw=await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/inr.json`)
         let Json =await raw.json()
 
-        console.log(fromType);
-        console.log(toType);
+        console.log("from "+fromType+" to "+toType);
     
         // console.log(Json[fromType.toLowerCase()][toType.toLowerCase()]);
 
@@ -107,7 +105,7 @@ export function CurrencyConvert() {
                         Calculate
                     </button> */}{/**used useEffect instad of calculate function */}
                     <div className="ans">
-                        {ans}
+                        {from+" "+fromType+" = "+ans+" "+toType} 
                     </div>
                 </div>
             </div>
