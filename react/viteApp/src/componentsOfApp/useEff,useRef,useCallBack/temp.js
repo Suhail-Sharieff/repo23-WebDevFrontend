@@ -1,13 +1,10 @@
-function generateRandomString(L) {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-    let result = '';
-    for (let i = 0; i < L; i++) {
-        const randomIndex = Math.floor(Math.random() * (122-65));
-        result += characters[randomIndex];
-    }
-    return result;
+async function get(from,to) {
+    let raw=await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${from}.json`)
+    let json =await raw.json()
+
+    
+    console.log(json[from][to]);
 }
 
 
-
-console.log(generateRandomString(5));
+get(`usd`,`inr`)
