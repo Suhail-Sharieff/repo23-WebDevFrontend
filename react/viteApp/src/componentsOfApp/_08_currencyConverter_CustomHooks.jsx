@@ -64,7 +64,7 @@ export function CurrencyConvert() {
 
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <div className="flex justify-center items-center  bg-gray-100">
             <div className="bg-white shadow-lg rounded-lg p-6 w-96">
                 <h2 className="text-xl font-semibold text-center mb-4">Currency Converter</h2>
                 <div className="flex flex-col space-y-4">

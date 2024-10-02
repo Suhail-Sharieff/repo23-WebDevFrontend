@@ -31,7 +31,8 @@ function App() {
       {/* <UseCallBack/> */}
       {/* <UseEff/> */}
       {/* <UseRef/> */}
-      <CurrencyConvert/>
+      {/* <CurrencyConvert/> */}
+      
 
       
     </>
