@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 
 function _05_User() {
     //IMP:
-    const {id}=useParams()//this will import the id
+    const {name}=useParams()//this will import the id
 
     //lets say i wanna display my github followers
     const [data,setData]=useState([])
@@ -16,7 +16,7 @@ function _05_User() {
   return (
     <div>
         {/* {http://localhost:5173/user/1} */}
-        Hola ur id is {id} and u have {data.followers} followers on github
+        Hola ur id is {name} and u have {data.followers} followers on github
         <div className="img">
             Your image is 
             <img src={data.avatar_url} alt="" />

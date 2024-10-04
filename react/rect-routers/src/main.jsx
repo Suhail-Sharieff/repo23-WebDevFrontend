@@ -18,6 +18,8 @@ import {
   Link,
   createRoutesFromElements,
 } from "react-router-dom";
+import C1 from './Components/children/C1.jsx'
+import C2 from './Components/children/C2.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,16 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element:(<_03_About/>),
+    children:[
+      {
+        path:"c1",
+        element:<C1/>
+      },
+      {
+        path:"c2",
+        element:<C2/>
+      },
+    ]
   },
   {
     path: "/services",
@@ -34,10 +46,18 @@ const router = createBrowserRouter([
   },
   // now supoose u want to pass data 
   {
-    // path:"/user/:id",
+    // path:"/user/:name",
     //default ill give 786
-    path:"/user/786",
+    path:"/user/:name",
     element:(<_05_User/>),
+  },
+  {
+    //to handle unkown paths 
+    path:"*",
+    element:
+    <div>
+      <h1>404 Elemnt Not found</h1>
+    </div>
   }
 ]);
 

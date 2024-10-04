@@ -1,8 +1,14 @@
 import React from 'react'
 import { Button, DarkThemeToggle, Flowbite } from 'flowbite-react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 function _01_Header() {
+
+  const navigate=useNavigate()
+  function goToUser(){
+    navigate("/user/Suhail")
+  }
+
   return (
     <div>
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
@@ -83,8 +89,12 @@ function _01_Header() {
                   `block py-2 pr-4 pl-3 duration-200 ${isActive ? "md:text-blue-700" : "md:text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-green-700 lg:p-0`
                 }
               >
-                Github
+                User/786
               </NavLink>
+
+              <Button onClick={goToUser}>
+                Move to User/Suhail
+              </Button>
 
 
 
