@@ -39,7 +39,7 @@ const sumArr=(function () {
     return function sum(...args) {
         return args.reduce((a,b)=>a+b,0)
     }
-})()
+})()//this is called IIFE immediately invoked function expression, it runs without calling
 console.log(sumArr(1,3,4,56));
 
 
