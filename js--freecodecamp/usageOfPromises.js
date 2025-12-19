@@ -44,6 +44,16 @@ let arr=[
 const exec=async()=>{
     await Promise.all(arr)
 }
+/*output:
+suhail@suhail-Inspiron-14-5430:~/cp$ node "/home/suhail/cp/main.js"
+Prom1 exec
+Prom1 done
+Prom2 exec
+Prom2 failed
+Prom3 exec
+Prom3 done
+suhail@suhai
+*/
 
 
 exec()
