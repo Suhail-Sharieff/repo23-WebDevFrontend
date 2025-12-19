@@ -32,3 +32,18 @@ let p2=promReject()
 p.catch(()=>{
     console.log("promise not fulfilled");
 })
+
+//multiple promises, ex: judge0 runs multiple cases:
+let arr=[
+    new Promise((res,rej)=>{setTimeout(()=>{console.log('Prom1 exec');res()},1000)}).then(()=>console.log('Prom1 done')),
+    new Promise((res,rej)=>{setTimeout(()=>{console.log('Prom2 exec');rej()},2000)}).then(()=>console.log('Prom2 done')).catch((err)=>console.log('Prom2 failed')),
+    new Promise((res,rej)=>{setTimeout(()=>{console.log('Prom3 exec');res()},3000)}).then(()=>console.log('Prom3 done')),
+]
+
+
+const exec=async()=>{
+    await Promise.all(arr)
+}
+
+
+exec()
